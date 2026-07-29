@@ -1,0 +1,14 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of https://www.marcopolo.me/.well-known/*
+host: https://www.marcopolo.me
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+note: >-
+  Marco Polo (Joya Communications) is a consumer mobile video-chat app with no
+  public developer surface; no .well-known discovery documents are published.
