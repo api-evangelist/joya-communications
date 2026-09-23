@@ -2,13 +2,19 @@ generated: '2026-07-19'
 method: searched
 source: live probes of https://www.marcopolo.me/.well-known/*
 host: https://www.marcopolo.me
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-note: >-
-  Marco Polo (Joya Communications) is a consumer mobile video-chat app with no
-  public developer surface; no .well-known discovery documents are published.
+note: Marco Polo (Joya Communications) is a consumer mobile video-chat app with no public developer surface;
+  no .well-known discovery documents are published.
+hosts:
+- host: https://www.marcopolo.me
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
